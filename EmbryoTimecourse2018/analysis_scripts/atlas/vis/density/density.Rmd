@@ -26,7 +26,7 @@ library(cowplot)
 library(BiocNeighbors)
 library(viridis)
 
-source("../../core_functions.R")
+source("../core_functions.R")
 load_data(remove_doublets = TRUE, remove_stripped = TRUE, load_corrected = TRUE)
 
 ```

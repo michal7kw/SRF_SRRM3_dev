@@ -11,13 +11,8 @@ output:
 ```{r load}
 library(ggplot2)
 library(cowplot)
-source("/nfs/research1/marioni/jonny/embryos/scripts/core_functions.R")
-meta = read.table("/nfs/research1/marioni/jonny/embryos/data/meta.tab", header = TRUE, stringsAsFactors = FALSE, comment.char = "$", sep = "\t")
-meta = meta[!(meta$doublet | meta$stripped),]
-meta = meta[grepl("E", meta$stage),]
-meta = meta[order(meta$stage),]
-meta$timepoint = meta$stage
-
+source("../core_functions.R")
+load_data(remove_doublets = TRUE, remove_stripped = TRUE, load_corrected = TRUE)
 
 #Each of these is a vector, with each entry corresponding to a single cell.
 #I.e. row one of clusters and timepoints corresponds to the SAME cell.
@@ -114,7 +109,7 @@ theiler_plot = plot_fn(timepoints = meta$theiler, clusters = meta$celltype)
 plot(theiler_plot)
 
 ggsave(theiler_plot + guides(fill=guide_legend(ncol=1)), 
-       filename = "/nfs/research1/marioni/jonny/embryos/scripts/vis/ribbon/plots/theiler.pdf", 
+       filename = "plots/theiler.pdf", 
        width = 8, height = 6)
 
 ```
@@ -127,7 +122,7 @@ theiler_plateau = plot_fn(timepoints = meta$theiler, clusters = meta$celltype, p
 plot(theiler_plateau +guides(fill=guide_legend(ncol=1)))
 
 ggsave(theiler_plateau + guides(fill=guide_legend(ncol=1)), 
-       filename = "/nfs/research1/marioni/jonny/embryos/scripts/vis/ribbon/plots/theiler_plateau.pdf", 
+       filename = "plots/theiler_plateau.pdf", 
        width = 8, height = 6)
 
 ```
@@ -143,7 +138,7 @@ stage_plot = plot_fn(meta$timepoint,
 plot(stage_plot)
 
 ggsave(stage_plot + guides(fill=guide_legend(ncol=1)), 
-       filename = "/nfs/research1/marioni/jonny/embryos/scripts/vis/ribbon/plots/stage.pdf", 
+       filename = "plots/stage.pdf", 
        width = 8, height = 6)
 
 ```
@@ -184,7 +179,7 @@ tot = ggdraw() +
 plot(tot)
 
 ggsave(tot,
-       filename = "/nfs/research1/marioni/jonny/embryos/scripts/vis/ribbon/plots/stage_doubling.pdf", 
+       filename = "plots/stage_doubling.pdf", 
        width = 11, height = 6)
 
 ```

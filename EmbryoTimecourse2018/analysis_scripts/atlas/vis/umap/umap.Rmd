@@ -17,20 +17,20 @@ library(Rtsne)
 library(irlba)
 library(cowplot)
 
-source("/nfs/research1/marioni/jonny/embryos/scripts/core_functions.R")
+source("../core_functions.R")
 load_data(remove_doublets = TRUE, remove_stripped = TRUE, load_corrected = TRUE)
 
 ```
 
 ```{r process}
 
-write.table(corrected$all, file = "/nfs/research1/marioni/jonny/embryos/scripts/vis/umap/scanpy_input.tab", col.names = FALSE, row.names = FALSE, sep = "\t", quote = FALSE)
+write.table(corrected$all, file = "scanpy_input.tab", col.names = FALSE, row.names = FALSE, sep = "\t", quote = FALSE)
 
-write.table(corrected$all[!meta$cluster %in% c(3, 8, 4, 11),], file = "/nfs/research1/marioni/jonny/embryos/scripts/vis/umap/scanpy_input_embryonic.tab", col.names = FALSE, row.names = FALSE, sep = "\t", quote = FALSE)
+write.table(corrected$all[!meta$cluster %in% c(3, 8, 4, 11),], file = "scanpy_input_embryonic.tab", col.names = FALSE, row.names = FALSE, sep = "\t", quote = FALSE)
 
-system("python3 /nfs/research1/marioni/jonny/embryos/scripts/vis/umap/umap.py")
+system("python3 umap.py")
 
-umap = read.table("/nfs/research1/marioni/jonny/embryos/scripts/vis/umap/umap.tab", header = FALSE, sep = "\t")
+umap = read.table("umap.tab", header = FALSE, sep = "\t")
 
 ```
 
@@ -46,6 +46,6 @@ p = ggplot(umap, aes(x= V1, y = V2, col = factor(meta$celltype, levels = names(c
 
 p
 
-ggsave(p, file = "/nfs/research1/marioni/jonny/embryos/scripts/vis/umap/umap.pdf", width = 11, height = 5)
+ggsave(p, file = "umap.pdf", width = 11, height = 5)
 
 ```
