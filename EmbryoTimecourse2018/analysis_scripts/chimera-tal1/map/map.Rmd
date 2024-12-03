@@ -81,7 +81,7 @@ getmode <- function(v, dist) {
 }
 
 mnnMap = function(atlas_pca, atlas_meta, map_pca, map_meta, k_map = 10){
-  require(kmknn)
+  require(BiocNeighbors)
   require(scran)
   
   correct = fastMNN(atlas_pca, map_pca, pc.input = TRUE)$corrected
@@ -89,7 +89,7 @@ mnnMap = function(atlas_pca, atlas_meta, map_pca, map_meta, k_map = 10){
   correct_atlas = correct[atlas,]
   correct_map = correct[-atlas,]
   
-  knns = kmknn::queryKNN(correct_atlas, correct_map, k = k_map, get.index = TRUE, get.distance = FALSE)
+  knns = findKNN(query = correct_map, X = correct_atlas, k = k_map)
   
   #get closest k matching cells
   k.mapped = t(apply(knns$index, 1, function(x) atlas_meta$cell[x]))
@@ -107,7 +107,6 @@ mnnMap = function(atlas_pca, atlas_meta, map_pca, map_meta, k_map = 10){
   names(out) = map_meta$cell
   
   return(out)
-  
 }
 
 #meta MUST have a cell column, celltype column and a stage column, spelled exactly like that

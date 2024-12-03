@@ -23,7 +23,7 @@ mcparam = MulticoreParam(workers = ncores)
 register(mcparam)
 library(irlba)
 library(cowplot)
-library(kmknn)
+library(BiocNeighbors)
 library(viridis)
 
 source("../../core_functions.R")
@@ -36,9 +36,9 @@ load_data(remove_doublets = TRUE, remove_stripped = TRUE, load_corrected = TRUE)
 pcs = corrected$all
 
 pre.pcs <- precluster(pcs)
-self.dist <- findKNN(precomputed=pre.pcs, k=50, BPPARAM=mcparam, get.index=FALSE)$distance
+self.dist <- findKNN(pre.pcs, k=50, BPPARAM=mcparam, get.index=FALSE)$distance
 dist2nth <- median(self.dist[,ncol(self.dist)])
-dists <- findNeighbors(precomputed=pre.pcs, threshold=dist2nth, BPPARAM=mcparam, get.index=FALSE)$distance
+dists <- findNeighbors(pre.pcs, threshold=dist2nth, BPPARAM=mcparam, get.index=FALSE)$distance
 
 dens <- sapply(dists, function(x){
   sum((1 - (x/dist2nth)^3)^3)
