@@ -1,0 +1,17 @@
+*.err
+*.out
+*.log
+*.gz
+*.tar
+*.tar.gz
+*.tab
+*.mtx
+*.txt
+*.rds
+*.tsv
+*.csv
+*.h5ad
+*.loom
+*.h5
+*.rds
+*.Rd
