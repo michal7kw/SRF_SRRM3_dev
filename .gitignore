@@ -22,3 +22,4 @@ __pycache__/
 *$py.class
 **/__pycache__/
 *.gmt
+Archive/
