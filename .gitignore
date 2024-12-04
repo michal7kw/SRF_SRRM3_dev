@@ -16,3 +16,9 @@
 *.rds
 *.Rd
 *.bib
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+**/__pycache__/
+*.gmt
