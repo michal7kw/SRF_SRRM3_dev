@@ -1,4 +1,19 @@
-# %%
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.16.4
+#   kernelspec:
+#     display_name: Python (snakemake)
+#     language: python
+#     name: snakemake
+# ---
+
+# +
 # Import required libraries
 import loompy
 import numpy as np
@@ -18,17 +33,16 @@ os.chdir('/beegfs/scratch/ric.broccoli/kubacki.michal/SRF_SRRM3_dev/Mousebrain')
 plt.style.use('default')  # Use default matplotlib style
 sns.set_theme()  # Apply seaborn styling
 sns.set_palette("husl")
+# -
 
 
-# %%
 loom_path = "/beegfs/scratch/ric.broccoli/kubacki.michal/SRF_SRRM3_dev/Mousebrain/DATA/dev_all.loom"
 
-# %%
 # Verify file exists
 print(f"File exists: {os.path.exists(loom_path)}")
 print(f"File size: {os.path.getsize(loom_path) / (1024**3):.2f} GB")
 
-# %%
+# +
 # Connect to the loom file (this doesn't load it entirely into memory)
 with loompy.connect(loom_path) as ds:
     # Basic information about the dataset
@@ -60,7 +74,7 @@ with loompy.connect(loom_path) as ds:
 # Force garbage collection
 gc.collect()
 
-# %%
+# +
 def get_srrm3_data(loom_path: str) -> Dict:
     """Extract Srrm3-related data from the loom file"""
     with loompy.connect(loom_path) as ds:
@@ -172,34 +186,32 @@ def plot_temporal_cell_type_heatmap(data: Dict):
     plt.savefig('plots/srrm3_temporal_cell_type_heatmap.pdf')
     plt.close()
 
-# %%
+
+# -
+
 # Create plots directory if it doesn't exist
 os.makedirs('plots', exist_ok=True)
 
-# %%
+# +
 # Execute analysis
 # if __name__ == "__main__":
 # Get data
 data = get_srrm3_data(loom_path)
 
 # Generate plots
-# %%
+# -
 plot_temporal_expression(data)
-# %%
 plot_cell_type_expression(data)
-# %%
 plot_regional_expression(data)
-# %%
 plot_temporal_cell_type_heatmap(data)
 
-# %%
 # Basic statistics
 print("\nSrrm3 Expression Statistics:")
 print(f"Mean expression: {np.mean(data['Expression']):.4f}")
 print(f"Median expression: {np.median(data['Expression']):.4f}")
 print(f"Percentage of cells expressing Srrm3: {(data['Expression'] > 0).mean() * 100:.2f}%")
 
-# %%
+# +
 # Top expressing cell types
 df = pd.DataFrame({
     'Cell Type': data['Class'],
@@ -212,7 +224,7 @@ print(df.groupby('Cell Type')['Expression']
         .sort_values('mean', ascending=False)
         .head())
 
-# %%
+# +
 print(np.__version__)
 
 
