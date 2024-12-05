@@ -1,4 +1,16 @@
-# %%
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,py
+#     text_representation:
+#       extension: .py
+#       format_name: light
+#       format_version: '1.5'
+#       jupytext_version: 1.16.4
+# ---
+
+# +
 # Import required libraries
 import loompy
 import numpy as np
@@ -23,16 +35,15 @@ sns.set_palette("husl")
 plots_dir = 'plots_clusters'
 if not os.path.exists(plots_dir):
     os.makedirs(plots_dir)
+# -
 
-# %%
 loom_path = "/beegfs/scratch/ric.broccoli/kubacki.michal/SRF_SRRM3_dev/Mousebrain/DATA/dev_all.agg.loom"
 
-# %%
 # Verify file exists
 print(f"File exists: {os.path.exists(loom_path)}")
 print(f"File size: {os.path.getsize(loom_path) / (1024**3):.2f} GB")
 
-# %%
+# +
 # Function to get age from column name
 def extract_age(age_col):
     return float(age_col.replace('Age_e', '').replace('_0', '').replace('_', '.'))
@@ -80,8 +91,8 @@ df = pd.DataFrame(age_expression_data)
 neuronal_keywords = ['neuron', 'Neural', 'Neuroblast', 'RG', 'IP', 'Projection']
 df['Is_Neuronal'] = df['Class'].str.contains('|'.join(neuronal_keywords), case=False)
 df_neurons = df[df['Is_Neuronal']]
+# -
 
-# %%
 # Create violin plot of expression by age for neuronal lineages
 plt.figure(figsize=(12, 6))
 sns.violinplot(data=df_neurons, x='Age', y='Expression', hue='Class')
@@ -97,7 +108,7 @@ plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_violin.png'),
             bbox_inches='tight', dpi=300)
 plt.show()
 
-# %%
+# +
 # Calculate mean expression by age and class
 mean_by_age_class = df_neurons.groupby(['Age', 'Class'])['Expression'].agg(['mean', 'std']).reset_index()
 
@@ -123,7 +134,7 @@ plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_lineplot.png'),
             bbox_inches='tight', dpi=300)
 plt.show()
 
-# %%
+# +
 # Create heatmap of expression by age and neuronal subclass
 pivot_df = df_neurons.pivot_table(
     values='Expression',
@@ -145,7 +156,7 @@ plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_heatmap.png'),
             bbox_inches='tight', dpi=300)
 plt.show()
 
-# %%
+# +
 # Print summary statistics
 print("\nSummary Statistics for Srrm3 Expression in Cortical Neuronal Lineages:")
 print("\nBy Age and Class:")
@@ -159,7 +170,7 @@ expression_percentage = df_neurons.groupby('Class').agg({
 }).round(2)
 print(expression_percentage)
 
-# %%
+# +
 # Optional: Box plot showing expression distribution by neuronal subclass
 plt.figure(figsize=(15, 6))
 sns.boxplot(data=df_neurons, x='Subclass', y='Expression')
@@ -182,5 +193,6 @@ with open(os.path.join(plots_dir, 'srrm3_cortical_statistics.txt'), 'w') as f:
 
 # Force garbage collection
 gc.collect()
+# -
 
-# %%
+
