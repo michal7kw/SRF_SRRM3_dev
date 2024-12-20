@@ -22,7 +22,7 @@ __pycache__/
 **/__pycache__/
 *.gmt
 Archive/
-
+Mousebrain/DATA
 
 # Filter out files larger than 100MB
 *.[!.][!g][!i][!t]* filter=lfs diff=lfs merge=lfs -text size=+100M
