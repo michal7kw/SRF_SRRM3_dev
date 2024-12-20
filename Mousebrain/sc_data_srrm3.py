@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.16.6
 #   kernelspec:
 #     display_name: Python (snakemake)
 #     language: python
@@ -102,6 +102,41 @@ os.makedirs('plots_sc', exist_ok=True)
 
 
 # # Data exploration
+
+# ## Expression format
+
+ds = loompy.connect(loom_path)
+matrix = ds[:, :]
+print("Matrix shape:", matrix.shape)
+print("Value range:", np.min(matrix), "-", np.max(matrix))
+print("Zero proportion:", np.sum(matrix == 0) / matrix.size)
+print("Mean expression:", np.mean(matrix))
+print("Mean expression (excluding zeros):", np.mean(matrix[matrix > 0]))
+
+plt.figure(figsize=(8,4))
+sns.histplot(matrix[matrix > 0].flatten(), bins=50, log=True)
+plt.xlabel('Expression values')
+plt.ylabel('Count')
+
+# +
+# Get Srrm3 index
+srrm3_idx = np.where(ds.ra.Gene == 'Srrm3')[0][0]
+srrm3_expr = matrix[srrm3_idx, :]
+
+plt.figure(figsize=(8,4))
+sns.histplot(srrm3_expr[srrm3_expr > 0], bins=30)
+plt.xlabel('Srrm3 expression')
+plt.ylabel('Count')
+
+# Calculate mean expression excluding zeros
+srrm3_mean_nonzero = np.mean(srrm3_expr[srrm3_expr > 0])
+print(f"Mean Srrm3 expression (excluding zeros): {srrm3_mean_nonzero:.3f}")
+
+# -
+
+# Calculate proportion of non-zero expression
+srrm3_expressed = np.sum(srrm3_expr > 0) / len(srrm3_expr)
+print(f"Srrm3 is expressed in {srrm3_expressed:.2%} of samples")
 
 examine_loom_file(loom_path)
 

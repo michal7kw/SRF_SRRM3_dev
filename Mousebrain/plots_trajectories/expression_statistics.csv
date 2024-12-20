@@ -1,0 +1,651 @@
+Gene,MainType,Age,mean,std,count,percent_expressing
+Eomes,Glioblasts,11.0,0.051,0.066,4,75.0
+Eomes,Glioblasts,12.0,0.016,0.026,4,100.0
+Eomes,Glioblasts,12.5,0.0,0.0,2,0.0
+Eomes,Glioblasts,13.0,0.002,0.004,3,33.333
+Eomes,Glioblasts,14.0,0.0,0.0,2,0.0
+Eomes,Glioblasts,14.5,0.005,,1,100.0
+Eomes,Glioblasts,15.0,0.004,,1,100.0
+Eomes,Glioblasts,15.5,0.0,,1,0.0
+Eomes,Glioblasts,16.5,0.027,,1,100.0
+Eomes,Neuroblasts,8.5,0.006,0.012,4,25.0
+Eomes,Neuroblasts,9.0,0.126,0.21,3,66.667
+Eomes,Neuroblasts,10.0,0.676,1.331,9,77.778
+Eomes,Neuroblasts,11.0,0.242,0.677,8,37.5
+Eomes,Neuroblasts,12.0,0.092,0.182,5,60.0
+Eomes,Neuroblasts,12.5,0.249,0.526,20,60.0
+Eomes,Neuroblasts,13.0,0.253,0.875,17,76.471
+Eomes,Neuroblasts,13.5,0.168,0.408,7,57.143
+Eomes,Neuroblasts,14.0,0.006,0.005,4,75.0
+Eomes,Neuroblasts,14.5,0.232,0.388,10,60.0
+Eomes,Neuroblasts,15.0,0.364,0.749,8,75.0
+Eomes,Neuroblasts,15.5,0.069,0.104,8,62.5
+Eomes,Neuroblasts,16.0,1.166,1.575,10,90.0
+Eomes,Neuroblasts,16.25,2.587,0.115,2,100.0
+Eomes,Neuroblasts,16.5,0.035,0.067,4,50.0
+Eomes,Neuroblasts,17.0,0.53,0.91,3,100.0
+Eomes,Neuroblasts,17.5,1.316,1.861,2,50.0
+Eomes,Neuroblasts,18.0,0.0,,1,0.0
+Eomes,Neurons,10.0,0.025,0.052,16,43.75
+Eomes,Neurons,11.0,0.066,0.116,19,68.421
+Eomes,Neurons,12.0,0.025,0.066,27,44.444
+Eomes,Neurons,12.5,0.116,0.37,33,54.545
+Eomes,Neurons,13.0,0.025,0.056,14,42.857
+Eomes,Neurons,13.5,0.325,0.74,13,69.231
+Eomes,Neurons,14.0,0.296,0.534,20,65.0
+Eomes,Neurons,14.5,0.005,0.008,13,30.769
+Eomes,Neurons,15.0,0.069,0.246,17,41.176
+Eomes,Neurons,15.5,0.007,0.015,10,30.0
+Eomes,Neurons,16.0,0.011,0.016,7,71.429
+Eomes,Neurons,16.25,0.064,0.147,7,85.714
+Eomes,Neurons,16.5,0.052,0.119,11,45.455
+Eomes,Neurons,17.0,0.051,0.094,5,60.0
+Eomes,Neurons,17.5,0.008,0.016,6,33.333
+Eomes,Neurons,18.0,0.002,0.002,5,60.0
+Eomes,OPCs,12.0,0.0,0.001,4,25.0
+Eomes,OPCs,12.5,0.004,,1,100.0
+Eomes,OPCs,13.0,0.0,,1,0.0
+Eomes,OPCs,13.5,0.005,0.005,2,100.0
+Eomes,OPCs,14.0,0.0,,1,0.0
+Eomes,OPCs,16.0,0.133,,1,100.0
+Eomes,Radial glia,8.0,0.014,,1,100.0
+Eomes,Radial glia,10.0,0.009,0.016,3,33.333
+Eomes,Radial glia,11.0,0.066,0.096,4,75.0
+Eomes,Radial glia,12.0,0.034,0.087,7,28.571
+Eomes,Radial glia,12.5,0.001,0.002,9,22.222
+Eomes,Radial glia,13.0,0.014,0.022,9,66.667
+Eomes,Radial glia,13.5,0.07,0.15,5,40.0
+Eomes,Radial glia,14.0,0.01,0.009,5,60.0
+Eomes,Radial glia,14.5,0.001,0.003,4,25.0
+Eomes,Radial glia,15.0,0.006,0.006,4,50.0
+Eomes,Radial glia,15.5,0.026,0.053,4,25.0
+Eomes,Radial glia,16.0,0.009,0.015,3,66.667
+Eomes,Radial glia,16.25,0.044,0.022,2,100.0
+Eomes,Radial glia,16.5,0.017,0.01,2,100.0
+Eomes,Radial glia,17.0,0.033,0.053,4,75.0
+Eomes,Radial glia,17.5,0.004,0.004,3,66.667
+Neurod2,Glioblasts,11.0,0.034,0.026,4,100.0
+Neurod2,Glioblasts,12.0,0.02,0.029,4,100.0
+Neurod2,Glioblasts,12.5,0.019,0.021,2,100.0
+Neurod2,Glioblasts,13.0,0.02,0.034,3,33.333
+Neurod2,Glioblasts,14.0,0.002,0.002,2,50.0
+Neurod2,Glioblasts,14.5,0.005,,1,100.0
+Neurod2,Glioblasts,15.0,0.015,,1,100.0
+Neurod2,Glioblasts,15.5,0.011,,1,100.0
+Neurod2,Glioblasts,16.5,0.02,,1,100.0
+Neurod2,Neuroblasts,8.5,0.009,0.01,4,75.0
+Neurod2,Neuroblasts,9.0,0.48,0.54,3,100.0
+Neurod2,Neuroblasts,10.0,1.048,1.354,9,88.889
+Neurod2,Neuroblasts,11.0,0.454,1.012,8,50.0
+Neurod2,Neuroblasts,12.0,1.209,1.493,5,100.0
+Neurod2,Neuroblasts,12.5,0.906,1.035,20,95.0
+Neurod2,Neuroblasts,13.0,0.573,0.981,17,94.118
+Neurod2,Neuroblasts,13.5,0.522,0.891,7,71.429
+Neurod2,Neuroblasts,14.0,1.216,2.267,4,100.0
+Neurod2,Neuroblasts,14.5,1.046,1.248,10,100.0
+Neurod2,Neuroblasts,15.0,0.602,0.955,8,100.0
+Neurod2,Neuroblasts,15.5,1.259,2.507,8,75.0
+Neurod2,Neuroblasts,16.0,1.172,1.43,10,100.0
+Neurod2,Neuroblasts,16.25,1.548,0.695,2,100.0
+Neurod2,Neuroblasts,16.5,0.101,0.175,4,75.0
+Neurod2,Neuroblasts,17.0,2.041,3.281,3,100.0
+Neurod2,Neuroblasts,17.5,1.031,0.18,2,100.0
+Neurod2,Neuroblasts,18.0,0.091,,1,100.0
+Neurod2,Neurons,10.0,0.096,0.15,16,87.5
+Neurod2,Neurons,11.0,1.061,1.962,19,94.737
+Neurod2,Neurons,12.0,1.254,1.953,27,85.185
+Neurod2,Neurons,12.5,1.039,1.518,33,87.879
+Neurod2,Neurons,13.0,1.645,1.912,14,78.571
+Neurod2,Neurons,13.5,1.23,1.218,13,84.615
+Neurod2,Neurons,14.0,0.432,0.917,20,85.0
+Neurod2,Neurons,14.5,0.864,1.239,13,92.308
+Neurod2,Neurons,15.0,0.667,1.567,17,94.118
+Neurod2,Neurons,15.5,0.635,1.605,10,90.0
+Neurod2,Neurons,16.0,1.087,1.731,7,100.0
+Neurod2,Neurons,16.25,0.234,0.372,7,85.714
+Neurod2,Neurons,16.5,0.119,0.143,11,100.0
+Neurod2,Neurons,17.0,0.384,0.472,5,100.0
+Neurod2,Neurons,17.5,0.181,0.325,6,100.0
+Neurod2,Neurons,18.0,1.102,2.383,5,60.0
+Neurod2,OPCs,12.0,0.01,0.003,4,100.0
+Neurod2,OPCs,12.5,0.009,,1,100.0
+Neurod2,OPCs,13.0,0.0,,1,0.0
+Neurod2,OPCs,13.5,0.008,0.012,2,50.0
+Neurod2,OPCs,14.0,0.0,,1,0.0
+Neurod2,OPCs,16.0,0.2,,1,100.0
+Neurod2,Radial glia,8.0,0.003,,1,100.0
+Neurod2,Radial glia,10.0,0.001,0.001,3,33.333
+Neurod2,Radial glia,11.0,0.046,0.021,4,100.0
+Neurod2,Radial glia,12.0,0.021,0.039,7,42.857
+Neurod2,Radial glia,12.5,0.003,0.008,9,22.222
+Neurod2,Radial glia,13.0,0.021,0.028,9,66.667
+Neurod2,Radial glia,13.5,0.031,0.068,5,60.0
+Neurod2,Radial glia,14.0,0.005,0.003,5,80.0
+Neurod2,Radial glia,14.5,0.005,0.01,4,25.0
+Neurod2,Radial glia,15.0,0.001,0.002,4,25.0
+Neurod2,Radial glia,15.5,0.015,0.017,4,75.0
+Neurod2,Radial glia,16.0,0.031,0.037,3,66.667
+Neurod2,Radial glia,16.25,0.012,0.001,2,100.0
+Neurod2,Radial glia,16.5,0.035,0.026,2,100.0
+Neurod2,Radial glia,17.0,0.018,0.026,4,50.0
+Neurod2,Radial glia,17.5,0.044,0.065,3,66.667
+Neurog2,Glioblasts,11.0,0.228,0.403,4,75.0
+Neurog2,Glioblasts,12.0,0.104,0.116,4,100.0
+Neurog2,Glioblasts,12.5,0.291,0.401,2,100.0
+Neurog2,Glioblasts,13.0,0.077,0.068,3,100.0
+Neurog2,Glioblasts,14.0,0.043,0.019,2,100.0
+Neurog2,Glioblasts,14.5,0.052,,1,100.0
+Neurog2,Glioblasts,15.0,0.051,,1,100.0
+Neurog2,Glioblasts,15.5,0.004,,1,100.0
+Neurog2,Glioblasts,16.5,0.184,,1,100.0
+Neurog2,Neuroblasts,8.5,1.65,1.063,4,100.0
+Neurog2,Neuroblasts,9.0,2.097,1.816,3,100.0
+Neurog2,Neuroblasts,10.0,1.851,2.153,9,100.0
+Neurog2,Neuroblasts,11.0,0.664,0.751,8,100.0
+Neurog2,Neuroblasts,12.0,0.898,1.194,5,100.0
+Neurog2,Neuroblasts,12.5,1.221,2.177,20,90.0
+Neurog2,Neuroblasts,13.0,1.811,4.122,17,94.118
+Neurog2,Neuroblasts,13.5,0.128,0.191,7,100.0
+Neurog2,Neuroblasts,14.0,3.102,3.058,4,100.0
+Neurog2,Neuroblasts,14.5,2.599,3.422,10,100.0
+Neurog2,Neuroblasts,15.0,3.15,3.943,8,87.5
+Neurog2,Neuroblasts,15.5,1.041,1.542,8,75.0
+Neurog2,Neuroblasts,16.0,4.548,4.084,10,100.0
+Neurog2,Neuroblasts,16.25,7.847,7.243,2,100.0
+Neurog2,Neuroblasts,16.5,0.478,0.235,4,100.0
+Neurog2,Neuroblasts,17.0,1.182,0.918,3,100.0
+Neurog2,Neuroblasts,17.5,9.155,8.12,2,100.0
+Neurog2,Neuroblasts,18.0,0.636,,1,100.0
+Neurog2,Neurons,10.0,0.169,0.289,16,93.75
+Neurog2,Neurons,11.0,0.111,0.142,19,94.737
+Neurog2,Neurons,12.0,0.087,0.123,27,77.778
+Neurog2,Neurons,12.5,0.144,0.171,33,90.909
+Neurog2,Neurons,13.0,0.141,0.251,14,78.571
+Neurog2,Neurons,13.5,0.229,0.514,13,92.308
+Neurog2,Neurons,14.0,0.14,0.264,20,80.0
+Neurog2,Neurons,14.5,0.07,0.08,13,76.923
+Neurog2,Neurons,15.0,0.188,0.363,17,94.118
+Neurog2,Neurons,15.5,0.258,0.567,10,80.0
+Neurog2,Neurons,16.0,0.041,0.06,7,57.143
+Neurog2,Neurons,16.25,0.014,0.019,7,71.429
+Neurog2,Neurons,16.5,0.161,0.256,11,100.0
+Neurog2,Neurons,17.0,0.414,0.63,5,80.0
+Neurog2,Neurons,17.5,0.226,0.509,6,83.333
+Neurog2,Neurons,18.0,0.104,0.111,5,80.0
+Neurog2,OPCs,12.0,0.019,0.031,4,75.0
+Neurog2,OPCs,12.5,0.196,,1,100.0
+Neurog2,OPCs,13.0,0.0,,1,0.0
+Neurog2,OPCs,13.5,0.032,0.042,2,100.0
+Neurog2,OPCs,14.0,0.0,,1,0.0
+Neurog2,OPCs,16.0,0.0,,1,0.0
+Neurog2,Radial glia,8.0,0.012,,1,100.0
+Neurog2,Radial glia,10.0,0.109,0.095,3,66.667
+Neurog2,Radial glia,11.0,1.349,1.362,4,100.0
+Neurog2,Radial glia,12.0,0.602,1.184,7,100.0
+Neurog2,Radial glia,12.5,0.091,0.067,9,100.0
+Neurog2,Radial glia,13.0,0.621,0.864,9,88.889
+Neurog2,Radial glia,13.5,1.4,1.703,5,100.0
+Neurog2,Radial glia,14.0,0.273,0.353,5,80.0
+Neurog2,Radial glia,14.5,0.019,0.022,4,50.0
+Neurog2,Radial glia,15.0,0.202,0.196,4,100.0
+Neurog2,Radial glia,15.5,0.412,0.45,4,75.0
+Neurog2,Radial glia,16.0,0.467,0.556,3,100.0
+Neurog2,Radial glia,16.25,1.35,0.154,2,100.0
+Neurog2,Radial glia,16.5,1.866,1.027,2,100.0
+Neurog2,Radial glia,17.0,0.308,0.457,4,50.0
+Neurog2,Radial glia,17.5,0.69,0.739,3,100.0
+Olig2,Glioblasts,11.0,0.668,1.16,4,100.0
+Olig2,Glioblasts,12.0,0.55,0.742,4,100.0
+Olig2,Glioblasts,12.5,0.268,0.352,2,100.0
+Olig2,Glioblasts,13.0,0.111,0.07,3,100.0
+Olig2,Glioblasts,14.0,0.427,0.099,2,100.0
+Olig2,Glioblasts,14.5,0.328,,1,100.0
+Olig2,Glioblasts,15.0,0.76,,1,100.0
+Olig2,Glioblasts,15.5,0.157,,1,100.0
+Olig2,Glioblasts,16.5,0.259,,1,100.0
+Olig2,Neuroblasts,8.5,0.022,0.027,4,50.0
+Olig2,Neuroblasts,9.0,0.177,0.166,3,66.667
+Olig2,Neuroblasts,10.0,0.094,0.098,9,88.889
+Olig2,Neuroblasts,11.0,0.032,0.058,8,75.0
+Olig2,Neuroblasts,12.0,0.075,0.125,5,60.0
+Olig2,Neuroblasts,12.5,0.049,0.088,20,70.0
+Olig2,Neuroblasts,13.0,0.052,0.063,17,88.235
+Olig2,Neuroblasts,13.5,0.084,0.174,7,71.429
+Olig2,Neuroblasts,14.0,0.057,0.03,4,100.0
+Olig2,Neuroblasts,14.5,0.071,0.09,10,70.0
+Olig2,Neuroblasts,15.0,0.271,0.396,8,87.5
+Olig2,Neuroblasts,15.5,0.036,0.048,8,75.0
+Olig2,Neuroblasts,16.0,0.051,0.101,10,90.0
+Olig2,Neuroblasts,16.25,0.024,0.013,2,100.0
+Olig2,Neuroblasts,16.5,0.096,0.171,4,50.0
+Olig2,Neuroblasts,17.0,0.006,0.011,3,33.333
+Olig2,Neuroblasts,17.5,0.042,0.039,2,100.0
+Olig2,Neuroblasts,18.0,0.818,,1,100.0
+Olig2,Neurons,10.0,0.01,0.027,16,37.5
+Olig2,Neurons,11.0,0.007,0.013,19,68.421
+Olig2,Neurons,12.0,0.004,0.012,27,22.222
+Olig2,Neurons,12.5,0.003,0.005,33,30.303
+Olig2,Neurons,13.0,0.002,0.004,14,50.0
+Olig2,Neurons,13.5,0.01,0.019,13,46.154
+Olig2,Neurons,14.0,0.005,0.012,20,35.0
+Olig2,Neurons,14.5,0.002,0.003,13,38.462
+Olig2,Neurons,15.0,0.026,0.092,17,41.176
+Olig2,Neurons,15.5,0.005,0.01,10,30.0
+Olig2,Neurons,16.0,0.0,0.001,7,14.286
+Olig2,Neurons,16.25,0.008,0.008,7,71.429
+Olig2,Neurons,16.5,0.005,0.005,11,63.636
+Olig2,Neurons,17.0,0.005,0.01,5,40.0
+Olig2,Neurons,17.5,0.006,0.008,6,50.0
+Olig2,Neurons,18.0,0.001,0.001,5,40.0
+Olig2,OPCs,12.0,2.962,0.253,4,100.0
+Olig2,OPCs,12.5,2.236,,1,100.0
+Olig2,OPCs,13.0,3.274,,1,100.0
+Olig2,OPCs,13.5,2.688,0.366,2,100.0
+Olig2,OPCs,14.0,2.0,,1,100.0
+Olig2,OPCs,16.0,3.0,,1,100.0
+Olig2,Radial glia,8.0,0.04,,1,100.0
+Olig2,Radial glia,10.0,0.014,0.006,3,100.0
+Olig2,Radial glia,11.0,0.055,0.084,4,100.0
+Olig2,Radial glia,12.0,0.031,0.063,7,57.143
+Olig2,Radial glia,12.5,0.045,0.062,9,66.667
+Olig2,Radial glia,13.0,0.041,0.069,9,66.667
+Olig2,Radial glia,13.5,0.016,0.007,5,100.0
+Olig2,Radial glia,14.0,0.18,0.226,5,100.0
+Olig2,Radial glia,14.5,0.128,0.213,4,75.0
+Olig2,Radial glia,15.0,0.085,0.091,4,75.0
+Olig2,Radial glia,15.5,0.038,0.047,4,75.0
+Olig2,Radial glia,16.0,0.114,0.099,3,100.0
+Olig2,Radial glia,16.25,0.015,0.017,2,100.0
+Olig2,Radial glia,16.5,0.063,0.076,2,100.0
+Olig2,Radial glia,17.0,0.02,0.022,4,75.0
+Olig2,Radial glia,17.5,0.061,0.013,3,100.0
+Pax6,Glioblasts,11.0,0.976,0.559,4,100.0
+Pax6,Glioblasts,12.0,1.288,0.704,4,100.0
+Pax6,Glioblasts,12.5,0.507,0.591,2,100.0
+Pax6,Glioblasts,13.0,0.3,0.141,3,100.0
+Pax6,Glioblasts,14.0,0.363,0.284,2,100.0
+Pax6,Glioblasts,14.5,0.738,,1,100.0
+Pax6,Glioblasts,15.0,0.767,,1,100.0
+Pax6,Glioblasts,15.5,0.401,,1,100.0
+Pax6,Glioblasts,16.5,1.231,,1,100.0
+Pax6,Neuroblasts,8.5,0.265,0.244,4,100.0
+Pax6,Neuroblasts,9.0,0.472,0.488,3,100.0
+Pax6,Neuroblasts,10.0,0.247,0.159,9,100.0
+Pax6,Neuroblasts,11.0,1.025,1.239,8,100.0
+Pax6,Neuroblasts,12.0,1.13,0.984,5,100.0
+Pax6,Neuroblasts,12.5,0.692,1.388,20,90.0
+Pax6,Neuroblasts,13.0,0.586,1.04,17,94.118
+Pax6,Neuroblasts,13.5,0.983,1.457,7,100.0
+Pax6,Neuroblasts,14.0,0.525,0.233,4,100.0
+Pax6,Neuroblasts,14.5,0.563,0.767,10,80.0
+Pax6,Neuroblasts,15.0,0.92,1.527,8,87.5
+Pax6,Neuroblasts,15.5,1.083,1.39,8,100.0
+Pax6,Neuroblasts,16.0,0.501,0.388,10,100.0
+Pax6,Neuroblasts,16.25,0.62,0.392,2,100.0
+Pax6,Neuroblasts,16.5,0.23,0.164,4,100.0
+Pax6,Neuroblasts,17.0,0.109,0.087,3,100.0
+Pax6,Neuroblasts,17.5,0.505,0.578,2,100.0
+Pax6,Neuroblasts,18.0,0.364,,1,100.0
+Pax6,Neurons,10.0,0.439,1.24,16,87.5
+Pax6,Neurons,11.0,0.535,1.139,19,94.737
+Pax6,Neurons,12.0,0.069,0.209,27,66.667
+Pax6,Neurons,12.5,0.084,0.127,33,93.939
+Pax6,Neurons,13.0,0.545,1.933,14,78.571
+Pax6,Neurons,13.5,0.924,1.456,13,84.615
+Pax6,Neurons,14.0,0.472,1.096,20,85.0
+Pax6,Neurons,14.5,0.343,0.855,13,100.0
+Pax6,Neurons,15.0,0.252,0.689,17,94.118
+Pax6,Neurons,15.5,0.46,1.176,10,90.0
+Pax6,Neurons,16.0,0.316,0.479,7,85.714
+Pax6,Neurons,16.25,0.267,0.439,7,85.714
+Pax6,Neurons,16.5,0.741,1.566,11,81.818
+Pax6,Neurons,17.0,0.034,0.049,5,80.0
+Pax6,Neurons,17.5,0.409,0.587,6,100.0
+Pax6,Neurons,18.0,0.085,0.143,5,80.0
+Pax6,OPCs,12.0,0.068,0.034,4,100.0
+Pax6,OPCs,12.5,0.298,,1,100.0
+Pax6,OPCs,13.0,0.148,,1,100.0
+Pax6,OPCs,13.5,0.221,0.276,2,100.0
+Pax6,OPCs,14.0,0.5,,1,100.0
+Pax6,OPCs,16.0,0.2,,1,100.0
+Pax6,Radial glia,8.0,0.478,,1,100.0
+Pax6,Radial glia,10.0,0.272,0.416,3,66.667
+Pax6,Radial glia,11.0,1.747,0.689,4,100.0
+Pax6,Radial glia,12.0,0.674,1.001,7,100.0
+Pax6,Radial glia,12.5,0.436,0.507,9,88.889
+Pax6,Radial glia,13.0,0.656,0.558,9,100.0
+Pax6,Radial glia,13.5,1.083,0.764,5,100.0
+Pax6,Radial glia,14.0,0.586,0.702,5,100.0
+Pax6,Radial glia,14.5,0.642,0.937,4,75.0
+Pax6,Radial glia,15.0,0.431,0.484,4,100.0
+Pax6,Radial glia,15.5,0.584,0.599,4,100.0
+Pax6,Radial glia,16.0,1.095,0.173,3,100.0
+Pax6,Radial glia,16.25,2.068,0.58,2,100.0
+Pax6,Radial glia,16.5,1.468,0.712,2,100.0
+Pax6,Radial glia,17.0,0.791,0.627,4,100.0
+Pax6,Radial glia,17.5,0.883,0.185,3,100.0
+Sox10,Glioblasts,11.0,0.01,0.015,4,50.0
+Sox10,Glioblasts,12.0,0.006,0.009,4,75.0
+Sox10,Glioblasts,12.5,0.0,0.0,2,0.0
+Sox10,Glioblasts,13.0,0.004,0.004,3,66.667
+Sox10,Glioblasts,14.0,0.0,0.0,2,0.0
+Sox10,Glioblasts,14.5,0.005,,1,100.0
+Sox10,Glioblasts,15.0,0.0,,1,0.0
+Sox10,Glioblasts,15.5,0.0,,1,0.0
+Sox10,Glioblasts,16.5,0.007,,1,100.0
+Sox10,Neuroblasts,8.5,0.012,0.015,4,50.0
+Sox10,Neuroblasts,9.0,0.018,0.015,3,100.0
+Sox10,Neuroblasts,10.0,0.008,0.015,9,22.222
+Sox10,Neuroblasts,11.0,0.018,0.046,8,25.0
+Sox10,Neuroblasts,12.0,0.011,0.018,5,60.0
+Sox10,Neuroblasts,12.5,0.0,0.002,20,5.0
+Sox10,Neuroblasts,13.0,0.001,0.003,17,17.647
+Sox10,Neuroblasts,13.5,0.002,0.006,7,14.286
+Sox10,Neuroblasts,14.0,0.001,0.002,4,25.0
+Sox10,Neuroblasts,14.5,0.002,0.005,10,10.0
+Sox10,Neuroblasts,15.0,0.002,0.003,8,25.0
+Sox10,Neuroblasts,15.5,0.0,0.001,8,12.5
+Sox10,Neuroblasts,16.0,0.001,0.002,10,20.0
+Sox10,Neuroblasts,16.25,0.0,0.0,2,0.0
+Sox10,Neuroblasts,16.5,0.004,0.006,4,50.0
+Sox10,Neuroblasts,17.0,0.002,0.003,3,33.333
+Sox10,Neuroblasts,17.5,0.0,0.0,2,0.0
+Sox10,Neuroblasts,18.0,0.0,,1,0.0
+Sox10,Neurons,10.0,0.004,0.017,16,18.75
+Sox10,Neurons,11.0,0.0,0.001,19,10.526
+Sox10,Neurons,12.0,0.0,0.001,27,11.111
+Sox10,Neurons,12.5,0.001,0.003,33,15.152
+Sox10,Neurons,13.0,0.135,0.503,14,28.571
+Sox10,Neurons,13.5,0.0,0.001,13,7.692
+Sox10,Neurons,14.0,0.0,0.0,20,0.0
+Sox10,Neurons,14.5,0.001,0.003,13,23.077
+Sox10,Neurons,15.0,0.0,0.0,17,0.0
+Sox10,Neurons,15.5,0.002,0.004,10,20.0
+Sox10,Neurons,16.0,0.0,0.001,7,14.286
+Sox10,Neurons,16.25,0.001,0.003,7,42.857
+Sox10,Neurons,16.5,0.0,0.001,11,9.091
+Sox10,Neurons,17.0,0.0,0.0,5,0.0
+Sox10,Neurons,17.5,0.0,0.0,6,0.0
+Sox10,Neurons,18.0,0.0,0.0,5,0.0
+Sox10,OPCs,12.0,0.792,0.432,4,100.0
+Sox10,OPCs,12.5,0.036,,1,100.0
+Sox10,OPCs,13.0,1.338,,1,100.0
+Sox10,OPCs,13.5,0.533,0.591,2,100.0
+Sox10,OPCs,14.0,0.75,,1,100.0
+Sox10,OPCs,16.0,0.733,,1,100.0
+Sox10,Radial glia,8.0,0.0,,1,0.0
+Sox10,Radial glia,10.0,0.01,0.016,3,66.667
+Sox10,Radial glia,11.0,0.001,0.002,4,25.0
+Sox10,Radial glia,12.0,0.003,0.009,7,14.286
+Sox10,Radial glia,12.5,0.005,0.006,9,55.556
+Sox10,Radial glia,13.0,0.002,0.004,9,33.333
+Sox10,Radial glia,13.5,0.005,0.006,5,60.0
+Sox10,Radial glia,14.0,0.041,0.076,5,80.0
+Sox10,Radial glia,14.5,0.001,0.001,4,25.0
+Sox10,Radial glia,15.0,0.003,0.005,4,25.0
+Sox10,Radial glia,15.5,0.001,0.001,4,25.0
+Sox10,Radial glia,16.0,0.004,0.005,3,66.667
+Sox10,Radial glia,16.25,0.0,0.0,2,0.0
+Sox10,Radial glia,16.5,0.004,0.006,2,50.0
+Sox10,Radial glia,17.0,0.0,0.0,4,0.0
+Sox10,Radial glia,17.5,0.001,0.002,3,33.333
+Sox2,Glioblasts,11.0,0.818,0.162,4,100.0
+Sox2,Glioblasts,12.0,1.07,0.167,4,100.0
+Sox2,Glioblasts,12.5,0.777,0.014,2,100.0
+Sox2,Glioblasts,13.0,0.965,0.258,3,100.0
+Sox2,Glioblasts,14.0,1.003,0.106,2,100.0
+Sox2,Glioblasts,14.5,0.815,,1,100.0
+Sox2,Glioblasts,15.0,1.251,,1,100.0
+Sox2,Glioblasts,15.5,0.88,,1,100.0
+Sox2,Glioblasts,16.5,0.721,,1,100.0
+Sox2,Neuroblasts,8.5,0.278,0.288,4,75.0
+Sox2,Neuroblasts,9.0,0.463,0.281,3,100.0
+Sox2,Neuroblasts,10.0,0.303,0.294,9,100.0
+Sox2,Neuroblasts,11.0,0.225,0.098,8,100.0
+Sox2,Neuroblasts,12.0,0.22,0.176,5,100.0
+Sox2,Neuroblasts,12.5,0.072,0.098,20,85.0
+Sox2,Neuroblasts,13.0,0.174,0.204,17,88.235
+Sox2,Neuroblasts,13.5,0.093,0.084,7,100.0
+Sox2,Neuroblasts,14.0,0.353,0.24,4,100.0
+Sox2,Neuroblasts,14.5,0.159,0.147,10,90.0
+Sox2,Neuroblasts,15.0,0.215,0.268,8,62.5
+Sox2,Neuroblasts,15.5,0.139,0.146,8,100.0
+Sox2,Neuroblasts,16.0,0.229,0.128,10,100.0
+Sox2,Neuroblasts,16.25,0.166,0.18,2,100.0
+Sox2,Neuroblasts,16.5,0.227,0.234,4,100.0
+Sox2,Neuroblasts,17.0,0.067,0.068,3,100.0
+Sox2,Neuroblasts,17.5,0.129,0.112,2,100.0
+Sox2,Neuroblasts,18.0,0.545,,1,100.0
+Sox2,Neurons,10.0,0.055,0.066,16,81.25
+Sox2,Neurons,11.0,0.101,0.111,19,100.0
+Sox2,Neurons,12.0,0.069,0.13,27,74.074
+Sox2,Neurons,12.5,0.097,0.196,33,87.879
+Sox2,Neurons,13.0,0.041,0.071,14,92.857
+Sox2,Neurons,13.5,0.01,0.021,13,53.846
+Sox2,Neurons,14.0,0.149,0.194,20,75.0
+Sox2,Neurons,14.5,0.006,0.007,13,69.231
+Sox2,Neurons,15.0,0.105,0.177,17,76.471
+Sox2,Neurons,15.5,0.129,0.187,10,80.0
+Sox2,Neurons,16.0,0.103,0.112,7,71.429
+Sox2,Neurons,16.25,0.104,0.118,7,85.714
+Sox2,Neurons,16.5,0.064,0.124,11,72.727
+Sox2,Neurons,17.0,0.109,0.237,5,60.0
+Sox2,Neurons,17.5,0.063,0.045,6,100.0
+Sox2,Neurons,18.0,0.083,0.163,5,60.0
+Sox2,OPCs,12.0,0.372,0.154,4,100.0
+Sox2,OPCs,12.5,0.68,,1,100.0
+Sox2,OPCs,13.0,0.717,,1,100.0
+Sox2,OPCs,13.5,0.587,0.347,2,100.0
+Sox2,OPCs,14.0,0.85,,1,100.0
+Sox2,OPCs,16.0,0.2,,1,100.0
+Sox2,Radial glia,8.0,0.68,,1,100.0
+Sox2,Radial glia,10.0,0.873,0.432,3,100.0
+Sox2,Radial glia,11.0,0.684,0.197,4,100.0
+Sox2,Radial glia,12.0,0.756,0.255,7,100.0
+Sox2,Radial glia,12.5,0.819,0.258,9,100.0
+Sox2,Radial glia,13.0,0.925,0.49,9,100.0
+Sox2,Radial glia,13.5,0.937,0.299,5,100.0
+Sox2,Radial glia,14.0,0.707,0.251,5,100.0
+Sox2,Radial glia,14.5,0.681,0.171,4,100.0
+Sox2,Radial glia,15.0,0.744,0.21,4,100.0
+Sox2,Radial glia,15.5,0.782,0.202,4,100.0
+Sox2,Radial glia,16.0,0.855,0.161,3,100.0
+Sox2,Radial glia,16.25,0.855,0.148,2,100.0
+Sox2,Radial glia,16.5,0.748,0.094,2,100.0
+Sox2,Radial glia,17.0,0.909,0.184,4,100.0
+Sox2,Radial glia,17.5,0.81,0.147,3,100.0
+Srrm3,Glioblasts,11.0,0.01,0.006,4,100.0
+Srrm3,Glioblasts,12.0,0.008,0.002,4,100.0
+Srrm3,Glioblasts,12.5,0.014,0.015,2,100.0
+Srrm3,Glioblasts,13.0,0.012,0.015,3,66.667
+Srrm3,Glioblasts,14.0,0.002,0.002,2,50.0
+Srrm3,Glioblasts,14.5,0.005,,1,100.0
+Srrm3,Glioblasts,15.0,0.022,,1,100.0
+Srrm3,Glioblasts,15.5,0.0,,1,0.0
+Srrm3,Glioblasts,16.5,0.014,,1,100.0
+Srrm3,Neuroblasts,8.5,0.673,0.487,4,100.0
+Srrm3,Neuroblasts,9.0,0.559,0.288,3,100.0
+Srrm3,Neuroblasts,10.0,0.576,0.662,9,100.0
+Srrm3,Neuroblasts,11.0,0.644,0.961,8,100.0
+Srrm3,Neuroblasts,12.0,0.719,0.433,5,100.0
+Srrm3,Neuroblasts,12.5,0.83,0.516,20,100.0
+Srrm3,Neuroblasts,13.0,0.756,0.733,17,94.118
+Srrm3,Neuroblasts,13.5,1.132,1.104,7,100.0
+Srrm3,Neuroblasts,14.0,0.316,0.121,4,100.0
+Srrm3,Neuroblasts,14.5,0.668,0.495,10,100.0
+Srrm3,Neuroblasts,15.0,0.677,0.692,8,100.0
+Srrm3,Neuroblasts,15.5,0.65,0.721,8,100.0
+Srrm3,Neuroblasts,16.0,0.381,0.299,10,100.0
+Srrm3,Neuroblasts,16.25,0.071,0.052,2,100.0
+Srrm3,Neuroblasts,16.5,0.997,0.968,4,100.0
+Srrm3,Neuroblasts,17.0,0.481,0.433,3,100.0
+Srrm3,Neuroblasts,17.5,0.99,1.385,2,100.0
+Srrm3,Neuroblasts,18.0,0.0,,1,0.0
+Srrm3,Neurons,10.0,0.911,0.446,16,100.0
+Srrm3,Neurons,11.0,0.606,0.271,19,100.0
+Srrm3,Neurons,12.0,0.492,0.222,27,100.0
+Srrm3,Neurons,12.5,0.678,0.348,33,100.0
+Srrm3,Neurons,13.0,0.534,0.282,14,100.0
+Srrm3,Neurons,13.5,0.679,0.426,13,100.0
+Srrm3,Neurons,14.0,0.556,0.256,20,100.0
+Srrm3,Neurons,14.5,0.847,0.366,13,100.0
+Srrm3,Neurons,15.0,0.667,0.314,17,100.0
+Srrm3,Neurons,15.5,0.798,0.344,10,100.0
+Srrm3,Neurons,16.0,0.435,0.256,7,100.0
+Srrm3,Neurons,16.25,0.557,0.138,7,100.0
+Srrm3,Neurons,16.5,0.72,0.356,11,100.0
+Srrm3,Neurons,17.0,0.566,0.148,5,100.0
+Srrm3,Neurons,17.5,0.612,0.252,6,100.0
+Srrm3,Neurons,18.0,0.779,0.354,5,100.0
+Srrm3,OPCs,12.0,0.061,0.034,4,100.0
+Srrm3,OPCs,12.5,0.049,,1,100.0
+Srrm3,OPCs,13.0,0.114,,1,100.0
+Srrm3,OPCs,13.5,0.124,0.138,2,100.0
+Srrm3,OPCs,14.0,0.0,,1,0.0
+Srrm3,OPCs,16.0,0.4,,1,100.0
+Srrm3,Radial glia,8.0,0.003,,1,100.0
+Srrm3,Radial glia,10.0,0.027,0.014,3,100.0
+Srrm3,Radial glia,11.0,0.003,0.003,4,75.0
+Srrm3,Radial glia,12.0,0.01,0.009,7,71.429
+Srrm3,Radial glia,12.5,0.023,0.019,9,100.0
+Srrm3,Radial glia,13.0,0.025,0.041,9,77.778
+Srrm3,Radial glia,13.5,0.016,0.011,5,100.0
+Srrm3,Radial glia,14.0,0.01,0.013,5,60.0
+Srrm3,Radial glia,14.5,0.005,0.007,4,50.0
+Srrm3,Radial glia,15.0,0.014,0.012,4,75.0
+Srrm3,Radial glia,15.5,0.03,0.025,4,75.0
+Srrm3,Radial glia,16.0,0.038,0.036,3,100.0
+Srrm3,Radial glia,16.25,0.003,0.002,2,100.0
+Srrm3,Radial glia,16.5,0.026,0.03,2,100.0
+Srrm3,Radial glia,17.0,0.014,0.028,4,25.0
+Srrm3,Radial glia,17.5,0.028,0.014,3,100.0
+Srrm4,Glioblasts,11.0,0.084,0.042,4,100.0
+Srrm4,Glioblasts,12.0,0.025,0.011,4,100.0
+Srrm4,Glioblasts,12.5,0.062,0.019,2,100.0
+Srrm4,Glioblasts,13.0,0.063,0.096,3,100.0
+Srrm4,Glioblasts,14.0,0.015,0.004,2,100.0
+Srrm4,Glioblasts,14.5,0.027,,1,100.0
+Srrm4,Glioblasts,15.0,0.025,,1,100.0
+Srrm4,Glioblasts,15.5,0.0,,1,0.0
+Srrm4,Glioblasts,16.5,0.122,,1,100.0
+Srrm4,Neuroblasts,8.5,4.679,1.864,4,100.0
+Srrm4,Neuroblasts,9.0,2.96,2.198,3,100.0
+Srrm4,Neuroblasts,10.0,2.529,1.42,9,100.0
+Srrm4,Neuroblasts,11.0,3.664,2.258,8,100.0
+Srrm4,Neuroblasts,12.0,3.064,2.436,5,100.0
+Srrm4,Neuroblasts,12.5,2.54,1.037,20,100.0
+Srrm4,Neuroblasts,13.0,2.31,1.303,17,100.0
+Srrm4,Neuroblasts,13.5,1.824,0.786,7,100.0
+Srrm4,Neuroblasts,14.0,2.75,1.26,4,100.0
+Srrm4,Neuroblasts,14.5,2.645,1.673,10,100.0
+Srrm4,Neuroblasts,15.0,2.502,0.874,8,100.0
+Srrm4,Neuroblasts,15.5,2.443,0.615,8,100.0
+Srrm4,Neuroblasts,16.0,2.963,1.747,10,100.0
+Srrm4,Neuroblasts,16.25,2.955,0.574,2,100.0
+Srrm4,Neuroblasts,16.5,3.505,2.827,4,100.0
+Srrm4,Neuroblasts,17.0,2.822,1.403,3,100.0
+Srrm4,Neuroblasts,17.5,2.412,0.509,2,100.0
+Srrm4,Neuroblasts,18.0,0.182,,1,100.0
+Srrm4,Neurons,10.0,1.288,0.549,16,100.0
+Srrm4,Neurons,11.0,1.179,0.574,19,100.0
+Srrm4,Neurons,12.0,1.098,0.582,27,100.0
+Srrm4,Neurons,12.5,1.163,0.639,33,100.0
+Srrm4,Neurons,13.0,1.1,0.658,14,100.0
+Srrm4,Neurons,13.5,1.381,0.885,13,100.0
+Srrm4,Neurons,14.0,1.452,0.862,20,100.0
+Srrm4,Neurons,14.5,1.023,0.576,13,100.0
+Srrm4,Neurons,15.0,1.166,0.658,17,100.0
+Srrm4,Neurons,15.5,1.095,0.514,10,100.0
+Srrm4,Neurons,16.0,1.055,0.568,7,100.0
+Srrm4,Neurons,16.25,0.838,0.259,7,100.0
+Srrm4,Neurons,16.5,1.095,0.393,11,100.0
+Srrm4,Neurons,17.0,0.866,0.227,5,100.0
+Srrm4,Neurons,17.5,1.145,0.672,6,100.0
+Srrm4,Neurons,18.0,1.033,0.663,5,100.0
+Srrm4,OPCs,12.0,0.076,0.051,4,100.0
+Srrm4,OPCs,12.5,0.2,,1,100.0
+Srrm4,OPCs,13.0,0.038,,1,100.0
+Srrm4,OPCs,13.5,0.07,0.038,2,100.0
+Srrm4,OPCs,14.0,0.1,,1,100.0
+Srrm4,OPCs,16.0,1.4,,1,100.0
+Srrm4,Radial glia,8.0,0.147,,1,100.0
+Srrm4,Radial glia,10.0,0.169,0.164,3,100.0
+Srrm4,Radial glia,11.0,0.103,0.044,4,100.0
+Srrm4,Radial glia,12.0,0.219,0.188,7,100.0
+Srrm4,Radial glia,12.5,0.281,0.19,9,100.0
+Srrm4,Radial glia,13.0,0.257,0.205,9,100.0
+Srrm4,Radial glia,13.5,0.326,0.143,5,100.0
+Srrm4,Radial glia,14.0,0.32,0.389,5,100.0
+Srrm4,Radial glia,14.5,0.073,0.096,4,75.0
+Srrm4,Radial glia,15.0,0.347,0.342,4,100.0
+Srrm4,Radial glia,15.5,0.381,0.34,4,100.0
+Srrm4,Radial glia,16.0,0.458,0.297,3,100.0
+Srrm4,Radial glia,16.25,0.152,0.093,2,100.0
+Srrm4,Radial glia,16.5,0.532,0.567,2,100.0
+Srrm4,Radial glia,17.0,0.217,0.085,4,100.0
+Srrm4,Radial glia,17.5,0.264,0.184,3,100.0
+Tubb3,Glioblasts,11.0,0.79,0.312,4,100.0
+Tubb3,Glioblasts,12.0,0.658,0.31,4,100.0
+Tubb3,Glioblasts,12.5,1.67,1.197,2,100.0
+Tubb3,Glioblasts,13.0,1.208,1.135,3,100.0
+Tubb3,Glioblasts,14.0,0.395,0.327,2,100.0
+Tubb3,Glioblasts,14.5,0.348,,1,100.0
+Tubb3,Glioblasts,15.0,0.884,,1,100.0
+Tubb3,Glioblasts,15.5,0.603,,1,100.0
+Tubb3,Glioblasts,16.5,1.197,,1,100.0
+Tubb3,Neuroblasts,8.5,35.403,31.552,4,100.0
+Tubb3,Neuroblasts,9.0,21.454,7.693,3,100.0
+Tubb3,Neuroblasts,10.0,28.589,26.437,9,100.0
+Tubb3,Neuroblasts,11.0,38.758,52.726,8,100.0
+Tubb3,Neuroblasts,12.0,39.274,26.083,5,100.0
+Tubb3,Neuroblasts,12.5,42.965,27.914,20,100.0
+Tubb3,Neuroblasts,13.0,35.399,30.075,17,100.0
+Tubb3,Neuroblasts,13.5,53.696,51.502,7,100.0
+Tubb3,Neuroblasts,14.0,22.572,9.161,4,100.0
+Tubb3,Neuroblasts,14.5,35.603,22.69,10,100.0
+Tubb3,Neuroblasts,15.0,34.011,33.019,8,100.0
+Tubb3,Neuroblasts,15.5,36.095,48.726,8,100.0
+Tubb3,Neuroblasts,16.0,21.093,11.569,10,100.0
+Tubb3,Neuroblasts,16.25,15.231,3.486,2,100.0
+Tubb3,Neuroblasts,16.5,35.083,24.478,4,100.0
+Tubb3,Neuroblasts,17.0,23.397,11.66,3,100.0
+Tubb3,Neuroblasts,17.5,38.018,46.676,2,100.0
+Tubb3,Neuroblasts,18.0,1.636,,1,100.0
+Tubb3,Neurons,10.0,45.059,21.546,16,100.0
+Tubb3,Neurons,11.0,32.407,13.161,19,100.0
+Tubb3,Neurons,12.0,25.563,11.207,27,100.0
+Tubb3,Neurons,12.5,35.062,14.145,33,100.0
+Tubb3,Neurons,13.0,26.916,13.893,14,100.0
+Tubb3,Neurons,13.5,32.273,19.702,13,100.0
+Tubb3,Neurons,14.0,31.499,10.388,20,100.0
+Tubb3,Neurons,14.5,36.865,23.238,13,100.0
+Tubb3,Neurons,15.0,36.662,16.703,17,100.0
+Tubb3,Neurons,15.5,33.302,10.508,10,100.0
+Tubb3,Neurons,16.0,22.915,8.347,7,100.0
+Tubb3,Neurons,16.25,30.419,9.105,7,100.0
+Tubb3,Neurons,16.5,39.783,17.805,11,100.0
+Tubb3,Neurons,17.0,33.939,10.964,5,100.0
+Tubb3,Neurons,17.5,29.899,18.662,6,100.0
+Tubb3,Neurons,18.0,37.19,14.933,5,100.0
+Tubb3,OPCs,12.0,0.799,0.114,4,100.0
+Tubb3,OPCs,12.5,1.142,,1,100.0
+Tubb3,OPCs,13.0,1.0,,1,100.0
+Tubb3,OPCs,13.5,0.752,0.113,2,100.0
+Tubb3,OPCs,14.0,0.7,,1,100.0
+Tubb3,OPCs,16.0,9.2,,1,100.0
+Tubb3,Radial glia,8.0,1.709,,1,100.0
+Tubb3,Radial glia,10.0,2.85,2.086,3,100.0
+Tubb3,Radial glia,11.0,0.722,0.081,4,100.0
+Tubb3,Radial glia,12.0,1.452,0.807,7,100.0
+Tubb3,Radial glia,12.5,1.359,0.77,9,100.0
+Tubb3,Radial glia,13.0,1.653,1.179,9,100.0
+Tubb3,Radial glia,13.5,1.691,0.898,5,100.0
+Tubb3,Radial glia,14.0,1.956,1.069,5,100.0
+Tubb3,Radial glia,14.5,1.087,0.946,4,100.0
+Tubb3,Radial glia,15.0,2.386,0.85,4,100.0
+Tubb3,Radial glia,15.5,2.072,1.417,4,100.0
+Tubb3,Radial glia,16.0,2.968,1.072,3,100.0
+Tubb3,Radial glia,16.25,2.172,0.889,2,100.0
+Tubb3,Radial glia,16.5,2.136,1.944,2,100.0
+Tubb3,Radial glia,17.0,2.511,0.333,4,100.0
+Tubb3,Radial glia,17.5,2.675,0.976,3,100.0

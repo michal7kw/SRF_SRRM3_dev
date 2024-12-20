@@ -7,8 +7,14 @@
 #       extension: .py
 #       format_name: light
 #       format_version: '1.5'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.16.6
+#   kernelspec:
+#     display_name: Python (snakemake)
+#     language: python
+#     name: snakemake
 # ---
+
+# # Environment setup
 
 # +
 # Import required libraries
@@ -43,69 +49,221 @@ loom_path = "/beegfs/scratch/ric.broccoli/kubacki.michal/SRF_SRRM3_dev/Mousebrai
 print(f"File exists: {os.path.exists(loom_path)}")
 print(f"File size: {os.path.getsize(loom_path) / (1024**3):.2f} GB")
 
-# +
+# # Functions definitions
+
 # Function to get age from column name
 def extract_age(age_col):
     return float(age_col.replace('Age_e', '').replace('_0', '').replace('_', '.'))
 
-# Connect to the loom file
-with loompy.connect(loom_path) as ds:
-    # Find Srrm3 gene index
-    srrm3_idx = np.where(ds.ra['Gene'] == 'Srrm3')[0]
-    if len(srrm3_idx) == 0:
-        raise ValueError("Srrm3 gene not found in the dataset")
+
+def extract_expression_data(loom_path: str, gene: str = 'Srrm3', tissues: List[str] = ['Tissue_ForebrainDorsal']) -> List[Dict]:
+    """
+    Extract expression data for a given gene from loom file, focusing on specific tissue regions.
     
-    # Get Srrm3 expression data
-    srrm3_expression = ds[srrm3_idx[0], :]
+    Args:
+        loom_path: Path to the loom file
+        gene: Gene name to analyze (default: 'Srrm3')
+        tissues: List of tissue column names to filter on (default: ['Tissue_ForebrainDorsal'])
+        
+    Returns:
+        List of dictionaries containing age and expression data for each cell
+    """
+    # Connect to the loom file
+    with loompy.connect(loom_path) as ds:
+        # Find gene index
+        gene_idx = np.where(ds.ra['Gene'] == gene)[0]
+        if len(gene_idx) == 0:
+            raise ValueError(f"{gene} gene not found in the dataset")
+        
+        # Get gene expression data
+        gene_expression = ds[gene_idx[0], :]
+        
+        # Get age columns
+        age_cols = [col for col in ds.ca.keys() if col.startswith('Age_e')]
+        
+        # Create a dictionary to store age and expression data
+        age_expression_data = []
+        
+        # For each cell
+        for cell_idx in range(ds.shape[1]):
+            # Check if cell belongs to any of the specified tissues
+            if any(ds.ca[tissue][cell_idx] == 1 for tissue in tissues):
+                # Find which age this cell belongs to
+                cell_age = None
+                for age_col in age_cols:
+                    if ds.ca[age_col][cell_idx] == 1:
+                        cell_age = extract_age(age_col)
+                        break
+                
+                if cell_age is not None:
+                    age_expression_data.append({
+                        'Age': cell_age,
+                        'Expression': gene_expression[cell_idx],
+                        'Cluster': ds.ca['ClusterName'][cell_idx],
+                        'Class': ds.ca['Class'][cell_idx],
+                        'Subclass': ds.ca['Subclass'][cell_idx],
+                        'Tissue': [tissue for tissue in tissues if ds.ca[tissue][cell_idx] == 1][0]
+                    })
+                    
+    return age_expression_data
+
+
+def examine_loom_file(loom_path: str) -> None:
+    """
+    Examine and print basic information about a loom file.
     
-    # Get age columns
-    age_cols = [col for col in ds.ca.keys() if col.startswith('Age_e')]
-    
-    # Create a dictionary to store age and expression data
-    age_expression_data = []
-    
-    # For each cell
-    for cell_idx in range(ds.shape[1]):
-        # Only include cells from cortical regions (Forebrain Dorsal)
-        if ds.ca['Tissue_ForebrainDorsal'][cell_idx] == 1:
-            # Find which age this cell belongs to
-            cell_age = None
-            for age_col in age_cols:
-                if ds.ca[age_col][cell_idx] == 1:
-                    cell_age = extract_age(age_col)
-                    break
-            
-            if cell_age is not None:
-                age_expression_data.append({
-                    'Age': cell_age,
-                    'Expression': srrm3_expression[cell_idx],
-                    'Cluster': ds.ca['ClusterName'][cell_idx],
-                    'Class': ds.ca['Class'][cell_idx],
-                    'Subclass': ds.ca['Subclass'][cell_idx]
-                })
+    Args:
+        loom_path: Path to the loom file
+    """
+    # Connect to the loom file (this doesn't load it entirely into memory)
+    with loompy.connect(loom_path) as ds:
+        # Basic information about the dataset
+        print("\nDataset shape:", ds.shape)
+        print(f"Number of cells: {ds.shape[1]:,}")
+        print(f"Number of genes: {ds.shape[0]:,}")
+        
+        # Examine column attributes (cell metadata)
+        print("\nColumn attributes (cell metadata):")
+        for attr in ds.ca.keys():
+            print(f"- {attr}: {ds.ca[attr].dtype}")
+        
+        # Examine row attributes (gene metadata)
+        print("\nRow attributes (gene metadata):")
+        for attr in ds.ra.keys():
+            print(f"- {attr}: {ds.ra[attr].dtype}")
+        
+        # Get a small sample of the expression matrix (first 5 genes, first 5 cells)
+        print("\nSample of expression matrix (5x5):")
+        sample_matrix = ds[:5, :5]
+        print(sample_matrix)
+        
+        # Get some basic statistics
+        print("\nBasic statistics:")
+        print(f"Mean expression: {np.mean(sample_matrix):.4f}")
+        print(f"Median expression: {np.median(sample_matrix):.4f}")
+        print(f"Sparsity: {(sample_matrix == 0).sum() / sample_matrix.size:.2%}")
+
+    # Force garbage collection
+    gc.collect()
+
+
+# # Data exploration
+
+examine_loom_file(loom_path)
+
+# **Available tissues:**
+#
+# - Tissue_All: int64
+# - Tissue_Forebrain: int64
+# - Tissue_ForebrainDorsal: int64
+# - Tissue_ForebrainVentral: int64
+# - Tissue_ForebrainVentroLateral: int64
+# - Tissue_ForebrainVentroThalamic: int64
+# - Tissue_Head: int64
+# - Tissue_Hindbrain: int64
+# - Tissue_Midbrain: int64
+# - Tissue_MidbrainDorsal: int64
+# - Tissue_MidbrainVentral: int64
+
+# ## Expression format
+
+ds = loompy.connect(loom_path)
+matrix = ds[:, :]
+print("Matrix shape:", matrix.shape)
+print("Value range:", np.min(matrix), "-", np.max(matrix))
+print("Zero proportion:", np.sum(matrix == 0) / matrix.size)
+print("Mean expression:", np.mean(matrix))
+print("Mean expression (excluding zeros):", np.mean(matrix[matrix > 0]))
+
+
+plt.figure(figsize=(8,4))
+sns.histplot(matrix[matrix > 0].flatten(), bins=50, log=True)
+plt.xlabel('Expression values')
+plt.ylabel('Count')
+
+# +
+# Get Srrm3 index
+srrm3_idx = np.where(ds.ra.Gene == 'Srrm3')[0][0]
+srrm3_expr = matrix[srrm3_idx, :]
+
+plt.figure(figsize=(8,4))
+sns.histplot(srrm3_expr[srrm3_expr > 0], bins=30)
+plt.xlabel('Srrm3 expression')
+plt.ylabel('Count')
+
+# Calculate mean expression excluding zeros
+srrm3_mean_nonzero = np.mean(srrm3_expr[srrm3_expr > 0])
+print(f"Mean Srrm3 expression (excluding zeros): {srrm3_mean_nonzero:.3f}")
+# -
+
+# Calculate proportion of non-zero expression
+srrm3_expressed = np.sum(srrm3_expr > 0) / len(srrm3_expr)
+print(f"Srrm3 is expressed in {srrm3_expressed:.2%} of samples")
+
+# +
+age_expression_data = extract_expression_data(loom_path, tissues=['Tissue_ForebrainDorsal'])
 
 # Convert to DataFrame
 df = pd.DataFrame(age_expression_data)
-
-# Filter for neuronal lineages (you might need to adjust these filters based on your data)
-neuronal_keywords = ['neuron', 'Neural', 'Neuroblast', 'RG', 'IP', 'Projection']
-df['Is_Neuronal'] = df['Class'].str.contains('|'.join(neuronal_keywords), case=False)
-df_neurons = df[df['Is_Neuronal']]
+print(df.shape)
 # -
 
-# Create violin plot of expression by age for neuronal lineages
-plt.figure(figsize=(12, 6))
-sns.violinplot(data=df_neurons, x='Age', y='Expression', hue='Class')
-plt.title('Srrm3 Expression in Cortical Neuronal Lineages Across Development')
-plt.xlabel('Embryonic Day')
-plt.ylabel('Expression Level')
-plt.xticks(rotation=45)
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+df.head()
+
+print(list(df['Class'].unique()))
+print(list(df['Subclass'].unique()))
+print(list(df['Cluster'].unique()))
+print(list(df['Tissue'].unique()))
+
+
+print(list(df[df['Class'] == 'Gastrulation']["Subclass"].unique()))
+print(list(df[df['Class'] == 'Neuron']["Subclass"].unique()))
+
+neuronal_subclasses = list(df[df['Class'] == 'Neuron']["Subclass"].unique())
+# Count occurrences of each neuronal subclass
+neuronal_subclass_counts = df[df['Class'] == 'Neuron']['Subclass'].value_counts()
+print("\nNeuronal subclass counts:")
+print(neuronal_subclass_counts)
+
+
+# Filter for neuronal lineages (you might need to adjust these filters based on your data)
+df['Is_Neuronal'] = df['Class'] == 'Neuron'
+df_neurons = df[df['Is_Neuronal']]
+
+df_neurons.head()
+
+# +
+# Aggregate expression data by neuronal subclass
+pivot_df = df_neurons.groupby('Subclass')['Expression'].mean().reset_index()
+
+# Sort by expression value and set 'Subclass' as the index
+pivot_df = pivot_df.sort_values('Expression', ascending=False)
+pivot_df.set_index('Subclass', inplace=True)
+
+# Create the plot
+plt.figure(figsize=(10, 8))
+sns.heatmap(pivot_df, 
+            cmap='viridis',  
+            annot=True,      # Show values in cells
+            fmt='.2f',       # Format to 2 decimal places
+            cbar_kws={'label': 'Mean Expression'})
+
+# Customize the plot
+plt.title('Mean Srrm3 Expression by Neuronal Subclass', fontsize=14, pad=20)
+plt.xlabel('Mean Expression Level', fontsize=12)
+plt.ylabel('Neuronal Subclass', fontsize=12)
+
+# Adjust layout
 plt.tight_layout()
-plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_violin.pdf'), 
-            bbox_inches='tight', dpi=300)
-plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_violin.png'), 
-            bbox_inches='tight', dpi=300)
+
+# Save figures
+plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_heatmap_no_age.pdf'), 
+            bbox_inches='tight', 
+            dpi=300)
+plt.savefig(os.path.join(plots_dir, 'srrm3_cortical_heatmap_no_age.png'), 
+            bbox_inches='tight', 
+            dpi=300)
+
 plt.show()
 
 # +
@@ -171,7 +329,6 @@ expression_percentage = df_neurons.groupby('Class').agg({
 print(expression_percentage)
 
 # +
-# Optional: Box plot showing expression distribution by neuronal subclass
 plt.figure(figsize=(15, 6))
 sns.boxplot(data=df_neurons, x='Subclass', y='Expression')
 plt.xticks(rotation=45, ha='right')
@@ -193,6 +350,3 @@ with open(os.path.join(plots_dir, 'srrm3_cortical_statistics.txt'), 'w') as f:
 
 # Force garbage collection
 gc.collect()
-# -
-
-
